@@ -1,0 +1,87 @@
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários - Projeto Coragem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/styles/folha.css' %}">
+</head>
+<body>
+    <br>
+    <div id = "cabecalho">
+        <h1>Lista de Usuários</h1>
+        <br>
+    </div>    
+    <br>
+    <nav class = "menu-retornar_navegacao_inicio">
+        <a href ={% url 'indexcompleta' %}> RETORNAR </a>
+    </nav>
+    <br> 
+    <br>
+  
+    {% comment %} <div id ="cabecalho_usuarios" class="container">  {% endcomment %}
+        <table class = "table table-dark" style = "margin-left: 0px">
+            <thead>
+            <tr>
+                <th>id:</th>
+                <th>Nome:</th>
+                <th>Data de Nascimento:</th>
+                <th>Idade:</th>
+                <th>Gênero:</th>
+                <th>Naturalidade:</th>
+                <th>Tempo na Cidade:</th>
+                <th>CPF:</th>
+                <th>RG:</th>
+                <th>NIS:</th>
+                <th>SUS:</th>
+                <th>Nome da Mãe:</th>
+                <th>Nome do Pai:</th>
+                <th>Nome do Responsável:</th>
+                <th>Grau de Parentesco:</th>
+                <th>Endereço:</th>
+                <th>Bairro:</th>
+                <th>Cidade:</th>
+                <th>Estado:</th>
+                <th>Telefone:</th>
+                <th>Celular:</th>
+                <th>Encaminhamento:</th>
+                <th>Motivo:</th>
+            </tr>
+           {% for novo_usuario in usuarios %}
+            <tr>
+                <td> {{ novo_usuario.id }} </td>
+                <td> {{ novo_usuario.nome}} </td>
+                <td> {{ novo_usuario.nasc}} </td>
+                <td> {{ novo_usuario.idade }} </td>
+                <td> {{ novo_usuario.genero}} </td>
+                <td> {{ novo_usuario.naturalidade}} </td>
+                <td> {{ novo_usuario.tempo}} </td>
+                <td> {{ novo_usuario.cpf }} </td>
+                <td> {{ novo_usuario.rg }} </td>
+                <td> {{ novo_usuario.nis }} </td>
+                <td> {{ novo_usuario.sus }} </td>
+                <td> {{ novo_usuario.mae }} </td>
+                <td> {{ novo_usuario.pai }} </td>
+                <td> {{ novo_usuario.resp }} </td>
+                <td> {{ novo_usuario.parentesco }} </td>
+                <td> {{ novo_usuario.end }} </td>
+                <td> {{ novo_usuario.bairro }} </td>
+                <td> {{ novo_usuario.cidade }} </td>
+                <td> {{ novo_usuario.estado }} </td>
+                <td> {{ novo_usuario.tel }} </td>
+                <td> {{ novo_usuario.cel }} </td>
+                <td> {{ novo_usuario.enc }} </td>
+                <td> {{ novo_usuario.motivo }} </td>
+            </tr>    
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

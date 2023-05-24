@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial - Projeto Coragem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/styles/folha.css' %}">
+</head>
+<body>
+  <header class = "cabecalho">
+    <img src = "{% static 'assets/planodefundo.png' %}" alt = "Logo do Projeto Coragem"/>
+  </header>
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+{% endif %}
+  
+  <div id="arealog">
+    <form action="{% url 'logincadastrar' %}" method ="POST" id="formulario" autocomplete="off">
+      {%  csrf_token  %}
+        <div class="row">
+          {% for field in form.visible_fields %}
+            <div class="col-12 col-lg-12" style="margin-bottom: 10px">
+               <label for ="{{ field.id_for_label }}">
+                {{field.label}}
+               </label>
+               {{ field }}
+            
+            </div>
+          {% endfor%}
+        </div>
+        <br>
+        <div class = "menu-retornar_navegacao_inicio">
+            <button class="btn_submit_consultar" type = "submit">Cadastrar</button>
+        
+    </form> 
+  
+
+
+
+  <br>
+  <section class = "retornar">
+    <nav class = "pagina_inicial">
+      <a href = {% url 'inicio' %}> RETORNAR </a>
+    </nav>
+  </section>
+
+</body>
+</html>

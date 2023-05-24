@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial - Projeto Coragem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/folha.css' %}">
+</head>
+<body>
+  <header class = "cabecalho_imagem">
+    <img src = "{% static 'assets/planodefundoinicial.png' %}" alt = "Inicial Projeto Coragem"/>
+  </header>
+
+  
+  <main class = "principal">
+    <section class = "menu-lateral_index">
+      <nav class = "menu-lateral_navegacao_index">
+        <a href = "{% url 'login'  %}"> LOGIN </a>
+        {% comment %} <br>
+        <br>
+        <br>
+        <a href = "cadastro.html"> CADASTRAR </a>
+        <br>
+        <br>
+        <br>
+        <a href = "consultar.html"> CONSULTAR </a>
+        <br>
+        <br>
+        <br>
+        <a href = "index.html"> LOGOUT </a> {% endcomment %}
+      </nav>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários - Projeto Coragem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/styles/folha.css' %}">
+</head>
+<body>
+  <div id = "cabecalho">
+    <h1> CADASTRO DE PARTICIPANTES</h1>
+  </div>
+  <div id="imagemlogo">
+    <img src = "{% static 'assets/logo_projeto.png' %}" alt = "Logo do Projeto Coragem"/ align="right" height="180px", width="160px">
+  </div>
+
+    {% comment %} <div id="formulario"> {% endcomment %}
+
+    {% comment %} <form id="formulario" autocomplete="off">
+      {% csrf_token %}
+      <fieldset>
+        <legend> INSIRA OS DADOS AQUI:</legend>
+        <br>
+          <label for = "nome_id"> Nome: </label>
+          <input id = "nome_id" type = "text" style = "width: 500px" name = "nome" placeholder = "Nome Completo">
+          &nbsp;
+          <label for = "nasc_id"> Data de Nascimento: </label>
+          <input id = "nasc_id" type = "date" style = "width: 140px" name = "nascimento" placeholder = "dd/mm/aaaa">
+          <br>
+          <br>
+          <label for = "idade_id"> Idade: </label>
+          <input id = "idade_id" type = "text" style = "width: 50px" name = "idade" placeholder = "Idade">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for = "genero_id"> Gênero: </label>
+          <input id = "genero_id" type = "text" style = "width: 100px" name = "genero" placeholder = "Gênero">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for = "naturalidade_id"> Naturalidade: </label>
+          <input id = "naturalidade_id" type = "text" name = "naturalidade" placeholder = "Naturalidade">
+          &nbsp;
+          <label for = "tempo_id"> Tempo na Cidade: </label>
+          <input id = "tempo_id" type = "text" style = "width: 155px" name = "tempo" placeholder="Tempo na Cidade">
+          <br>
+          <br>
+          <!-- Documentos -->
+          <label for = "cpf_id"> CPF: </label>
+          <input id = "cpf_id" type = "text" name = "cpf" placeholder = "000000000-00">
+          &nbsp;
+          <label for = "rg_id"> RG: </label>
+          <input id = "rg_id" type = "text" name = "rg" placeholder = "RG">
+          &nbsp;
+          <label for = "nis_id"> NIS: </label>
+          <input id = "nis_id" type = "text" name = "nis" placeholder = "NIS">
+          &nbsp;
+          <label for = "sus_id"> Cartão do SUS: </label>
+          <input id = "sus_id" type = "text" name = "sus" placeholder = "SUS">
+          <br>
+          <br>
+          <label for = "mae_id"> Nome da Mãe: </label>
+          <input id = "mae_id" type = "text" style = "width: 600px" name = "mae" placeholder="Nome do Mãe">
+          <br>
+          <br>
+          <label for = "pai_id"> Nome do Pai: </label>
+          <input id = "pai_id" type = "text" style = "width: 607px" name = "pai" placeholder="Nome do Pai">
+          <br>
+          <br>
+          <label for = "resp_id"> Nome do Responsável: </label>
+          <input id = "resp_id" type = "text" style = "width: 545px" name = "resp" placeholder="Nome do Responsável">
+          <br>
+          <br>
+          <label for = "parent_id"> Grau de Parentesco: </label>
+          <input id = "parent_id" type = "text" style = "width: 100px" name = "parentesco" placeholder = "Grau de Parentesco">
+          <br>
+          <br>
+          <!--Endereço-->
+          <label for = "end_id"> Endereço: </label>
+          <input id = "end_id" type = "text" style = "width: 200px" name = "end" placeholder="Logradouro">
+          &nbsp;
+          <label for = "bairro_id"> Bairro: </label>
+          <input id = "bairro_id" type = "text" name = "bairro" placeholder="Bairro">
+          &nbsp;
+          <label for = "cidade_id"> Cidade: </label>
+          <input id = "cidade_id" type = "text" name = "cidade" placeholder="Cidade">
+          &nbsp;
+          <label for = "uf_id"> Estado: </label>
+          <input id = "uf_id" type = "text" name = "estado" placeholder="Estado">
+          <br>
+          <br>
+          <!--Contatos-->
+          <label for = "tel_id"> Telefone: </label>
+          <input id = "tel_id" type = "text" name = "tel" placeholder="Telefone com DDD">
+          &nbsp;
+          <label for = "cel_id"> Celular: </label>
+          <input id = "cel_id" type = "text" name = "celular" placeholder="Celular com DDD">
+          <br>
+          <br>
+
+          <!-- outros-->
+          <label for = "enc_id"> Encaminhamento (Órgão): </label>
+          <input id = "enc_id" type = "text" style = "width: 250px" name = "enc" placeholder="Órgão que realizou o encaminhamento">
+          &nbsp;
+          <label for = "motivo_id"> Motivo: </label>
+          <input id = "motivo_id" type = "text" style = "width: 250px" name = "motivo" placeholder="Motivo">
+          <br>
+          <br>
+          <input class="btn_submit_cadastrar" type="submit" value="Cadastrar">
+
+      </fieldset>
+    </form> {% endcomment %}
+  <br>
+  <form action="{% url 'usuarioscadastrados' %}" method="post">
+  {% csrf_token %}
+  <div class="container" id = "areacad">
+      Nome:<input type="text"style = "width: 500px" name = "nome" placeholder = "Nome Completo">
+      &nbsp;Data de Nascimento:<input type="text" style = "width: 140px" name = "nasc" placeholder = "Data de Nascimento">
+     <br>
+     <br>
+      Idade:<input type="text" style = "width: 50px" name = "idade" placeholder = "Idade">
+      &nbsp;Gênero: <input type="text" style = "width: 150px" name = "genero" placeholder = "Gênero">
+      &nbsp;Naturalidade:<input type="text" style = "width: 150px" name = "naturalidade" placeholder = "Naturalidade">
+      &nbsp;Tempo na Cidade:<input type="text"style = "width: 155px" name = "tempo" placeholder="Tempo na Cidade">
+      <br>
+      <br>
+      CPF:<input type="text" name = "cpf" placeholder = "00000000000">
+      &nbsp;RG:<input type="text"  name = "rg" placeholder = "RG">
+      &nbsp;NIS:<input type="text" name = "nis" placeholder = "NIS">
+      &nbsp;Cartão do SUS:<input type="text" name = "sus" placeholder = "SUS">
+      <br>
+      <br>
+      Nome da Mãe:<input type="text" style = "width: 600px" name = "mae" placeholder="Nome do Mãe">
+      <br>
+      <br>
+      Nome do Pai:<input type="text" style = "width: 607px" name = "pai" placeholder="Nome do Pai">
+      <br>
+      <br>
+      Nome do Responsável:<input type="text" style = "width: 545px" name = "resp" placeholder="Nome do Responsável">
+      <br>
+      <br>
+      Grau de Parentesco:<input type="text" style = "width: 150px" name = "parentesco" placeholder = "Grau de Parentesco">
+      <br>
+      <br>
+      Endereço:<input type="text" style = "width: 200px" name = "end" placeholder="Logradouro">
+      &nbsp;Bairro:<input type="text" style = "width: 150px" name = "bairro" placeholder="Bairro">
+      &nbsp;Cidade:<input type="text" style="width: 150px" name = "cidade" placeholder="Cidade">
+      &nbsp;Estado:<input type="text" style="width:100px" name = "estado" placeholder="Estado">
+      <br>
+      <br>
+      Telefone:<input type="text" style = "width:150px" name = "tel" placeholder="Telefone com DDD">
+      &nbsp;Celular:<input type="text" style = "width:150px" name = "cel" placeholder="Celular com DDD">
+      <br>
+      <br>
+      Encaminhamento:<input type="text" style = "width: 250px" name = "enc" placeholder="Órgão que realizou o encaminhamento">
+      &nbsp;Motivo:<input type="text" tyle = "width: 250px" name = "motivo" placeholder="Motivo">
+      <br>
+      <br>
+      <div class = "menu-retornar_navegacao_inicio">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <button class="btn_submit_consultar" type = "submit">Cadastrar</button>
+  <br>
+  <br>
+  <br>
+      </div>
+    </form>    
+      <section class = "menu-retornar">
+    <nav class = "menu-retornar_navegacao_inicio" >
+      <a href ={% url 'indexcompleta' %} align="left"> RETORNAR </a>
+    </nav>
+
+<!--Importação do JS-->
+
+
+</body>
+</html>
+

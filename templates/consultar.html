@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicial - Projeto Coragem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/styles/folha.css' %}">
+</head>
+<body>
+  <header class = "cabecalho">
+    <img src = "{% static 'assets/planodefundo.png' %}"  alt = "Logo do Projeto Coragem"/>
+  </header>
+
+  <main class = "principal">
+    <div id="area_consulta">
+      <form  id="formulario" autocomplete="off">
+        <fieldset>
+          <legend> Digite o CPF para Consulta:</legend>
+          <br>
+            <label for = "cpf"> CPF: </label>
+              <input id = "cpf" type = "text" name = "cpf" placeholder = "00000000000">
+              &nbsp;
+              <br>
+              <br>
+              <input class="btn_submit_consultar" type="submit" name = "buscar" value="Consultar">
+        </fieldset>
+      </form>
+    </div>
+    <nav class = "menu-retornar_navegacao_consultar">
+      <a href ={% url 'indexcompleta' %}> RETORNAR </a>
+    </nav>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+/*Estilo para a página inicial - index*/
+/*Imagem Plano de Fundo*/
+img{
+	margin-top: 100px;
+	margin-left: 250px;
+}
+
+/*Menu de Navegação da Pagina Inicial - Opções*/
+.menu-lateral_index{
+	margin-left: 300px;
+	margin-top: -400px;
+	box-sizing: border-box;
+	min-width: 270px;
+}
+
+.menu-lateral_navegacao_index a{
+	font-family: 'Josefin Sans', sans-serif;
+	align-items: center;
+	text-decoration: none;
+	color: #708090;
+	font-size: 20px;
+	border:1px dashed #708090;
+	padding: 10px;
+
+}
+
+/*Estilo para a página Login*/
+/*Área destinada ao login*/
+#arealog{
+	position: relative;
+	left: 20%;
+	top: -100px;
+	width: 400px;
+	height: 350px;
+	font-family:  'Josefin Sans', sans-serif;
+	color: #708090;
+	font-size: 20px;
+	margin-left: 100px;
+	margin-top: -350px;
+	box-sizing: border-box;
+
+}
+
+/*Área destinada aos campos do formulário de login*/
+#usuario_id, #senha_id{
+	border:1px dashed #708090;
+}
+
+/*Área destinada ao cadastro de usuários*/
+#aqui{
+	margin-left: 420px;
+	margin-top: -150px;
+	font-family:  'Josefin Sans', sans-serif;
+	color: #708090;
+
+}
+
+/*Área destinada ao botão Entrar*/
+.btn_submit_entrar {
+	background: #708090;
+	color: white;
+	font-size: 18px;
+	border:2px dashed #708090;
+	height: 50px;
+	width: 100px;
+	font:  'Josefin Sans', sans-serif;
+	text-shadow: none;
+	font-family:  'Josefin Sans', sans-serif;
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+
+/*Área destinada ao retorno para a página principal*/
+.menu-retornar_inicio{
+	margin-left: 700px;
+	margin-top: 0px;
+	box-sizing: border-box;
+	min-width: 270px;
+}
+
+.menu-retornar_navegacao_inicio a{
+	font-family:  'Josefin Sans', sans-serif;
+	align-items: center;
+	text-decoration: none;
+	color: #708090;
+	font-size: 16px;
+	border:1px dashed #708090;
+	padding: 10px;
+}
+
+/*Estilo da página de Cadastro*/
+/*Cabeçalho inicial*/
+#cabecalho{
+	font-family: 'Josefin Sans', sans-serif;
+	margin-left: 600px;
+	margin-right: 450px;
+	text-align: center;
+	color:#708090;
+	font-size: 16px;
+	border:1px dashed #708090;
+	padding: 10px;
+}
+
+/*Estilo da área de cadastro*/
+#areacad{
+	position: relative;
+	left: 20%;
+	top: 0px;
+	width: 1000px;
+	height: 480px;
+	font-family: 'Josefin Sans', sans-serif;
+	background: #D6DEE2;
+	color:#708090;
+
+}
+
+#nome_id, #nasc_id, #idade_id, #genero_id, #naturalidade_id, #tempo_id, #cpf_id, #rg_id,
+#nis_id, #sus_id, #mae_id, #pai_id, #resp_id, #parent_id, #end_id, #bairro_id, #cidade_id,
+#uf_id, #tel_id, #cel_id, #enc_id, #motivo_id{
+	border:1px dashed #708090;
+}
+
+.btn_submit_cadastrar {
+	background: #708090;
+	color: white;
+	font-size: 18px;
+	border-style: outset;
+	border-color: #708090;
+	height: 50px;
+	width: 100px;
+	font:  'Josefin Sans', sans-serif;
+	text-shadow: none;
+	font-family:  'Josefin Sans', sans-serif;
+	margin-left: 850px;
+	margin-right: -150px;
+
+}
+
+input{
+	font:  'Josefin Sans', sans-serif;
+}
+
+.menu-retornar_navegacao_voltar a{
+	font-family:  'Josefin Sans', sans-serif;
+	align-items: center;
+	text-decoration: none;
+	color: #708090;
+	font-size: 16px;
+	border:1px dashed #708090;
+	padding: 10px;
+	margin-left: 1200px;
+}
+
+/*Estilo da página Consulta*/
+#area_consulta{
+	position: relative;
+	left: 20%;
+	top: -100px;
+	width: 400px;
+	height: 200px;
+	font-family:  'Josefin Sans', sans-serif;
+	color: #708090;
+	font-size: 20px;
+	margin-left: 100px;
+	margin-top: -350px;
+	box-sizing: border-box;
+
+}
+
+.btn_submit_consultar{
+	background: #708090;
+	color: white;
+	font-size: 18px;
+	border:2px dashed #708090;
+	height: 50px;
+	width: 100px;
+	font:  'Josefin Sans', sans-serif;
+	text-shadow: none;
+	font-family:  'Josefin Sans', sans-serif;
+	margin-left: 250px;
+	margin-right: 0px;
+
+}
+
+.menu-retornar_navegacao_consultar a{
+	font-family: 'Josefin Sans', sans-serif;
+	align-items: center;
+	text-decoration: none;
+	color: #708090;
+	font-size: 16px;
+	border:1px dashed #708090;
+	padding: 10px;
+	margin-left: 700px;
+}
