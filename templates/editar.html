@@ -11,21 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static '/styles/folha.css' %}">
 </head>
 <body>
-  <br>
   <div id = "cabecalho">
-    <h1> CADASTRO DE PARTICIPANTES</h1>
+    <h1> ALTERAÇÃO DE PARTICIPANTES</h1>
   </div>
   <div id="imagemlogo">
     <img src = "{% static 'assets/logo_projeto.png' %}" alt = "Logo do Projeto Coragem"/ align="right" height="180px", width="160px">
   </div>
+
   <br>
-  <div id="areacad">
-  <form action="{% url 'usuarioscadastrados' %}" method="post">
+  <form action="{% url 'editar' %}" method="post">
   {% csrf_token %}
+  <div class="container" id = "areacad">
       Nome:<input type="text"style = "width: 500px" name = "nome" placeholder = "Nome Completo">
       &nbsp;Data de Nascimento:<input type="text" style = "width: 140px" name = "nasc" placeholder = "Data de Nascimento">
      <br>
@@ -66,17 +65,21 @@
       <br>
       Encaminhamento:<input type="text" style = "width: 250px" name = "enc" placeholder="Órgão que realizou o encaminhamento">
       &nbsp;Motivo:<input type="text" tyle = "width: 250px" name = "motivo" placeholder="Motivo">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-      <button class="btn btn-primary" type = "submit">Cadastrar</button>
-        <a href= "{% url 'indexcompleta' %}"class="btn btn-primary">Retornar ao Início</a>
-    
+      <br>
+      <br>
+      <div class = "menu-retornar_navegacao_inicio">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <button class="btn_submit_consultar" type = "submit">Alterar</button>
   <br>
   <br>
   <br>
+      </div>
     </form>    
- 
+      <section class = "menu-retornar">
+    <nav class = "menu-retornar_navegacao_inicio" >
+      <a href ={% url 'listausuarios' %} align="left"> RETORNAR </a>
+    </nav>
 
-  </div>
 <!--Importação do JS-->
 
 

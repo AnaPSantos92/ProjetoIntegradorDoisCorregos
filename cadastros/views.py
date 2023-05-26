@@ -1,8 +1,8 @@
 from typing import Any
 from django.db.models.query import QuerySet
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse_lazy
-from cadastros.forms import LoginForms, CadastroForms, Cadastrados
+from cadastros.forms import LoginForms, CadastroForms, CadastradosForms
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib import messages
@@ -161,5 +161,38 @@ def buscar(request):
         nome_a_buscar = request.GET['cpf']
         if nome_a_buscar:
             usuarios = usuarios.filter(cpf__icontains=nome_a_buscar)
-    
+            
     return render(request, 'buscar.html', {"usuarios": usuarios})
+
+
+""" def editar(request, novo_usuario_id):
+    resultado = Cadastrados.objects.get(id=novo_usuario_id)
+    form = Cadastrados(resultado)
+    
+    if request.method == "POST":
+        form = Cadastrados(request.POST, request.FILES, resultado)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Editado com sucesso!')
+            return redirect('listausuarios')
+    
+    return render(request, 'editar.html', {"form": form, 'novo_usuario_id': novo_usuario_id}) """
+    
+def editar(request):
+    return render(request, "editar.html")
+    
+
+def deletar(request, novo_usuario_id):
+    resultado = Cadastrados.objects.get(id=novo_usuario_id)
+    resultado.delete()
+    messages.success(request, 'Exclusão efetuada com sucesso!')
+    return redirect('listausuarios')
+
+    # usuarios = Cadastrados.objects.all()
+   # usuarios.delete()
+    # return render(request, 'deletar.html')
+
+
+
+    
+    

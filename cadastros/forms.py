@@ -73,8 +73,8 @@ class CadastroForms(forms.Form):
             }
         ),
     )
-    
-class Cadastrados(forms.Form):
+        
+class CadastradosForms(forms.Form):
    nome = forms.CharField(max_length=255)
    nasc = forms.CharField(max_length=20)
    idade = forms.IntegerField()

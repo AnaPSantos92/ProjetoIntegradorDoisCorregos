@@ -105,13 +105,12 @@ img{
 /*Estilo da área de cadastro*/
 #areacad{
 	position: relative;
-	left: 20%;
 	top: 0px;
 	width: 1000px;
-	height: 480px;
-	font-family: 'Josefin Sans', sans-serif;
-	background: #D6DEE2;
-	color:#708090;
+	height: 4800px;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 10px;
+
 
 }
 
